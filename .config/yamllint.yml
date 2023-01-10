@@ -1,0 +1,3 @@
+rules:
+  ## Additional rules with warnings
+  line-length: {level: warning, max: 180}

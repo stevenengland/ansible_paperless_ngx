@@ -20,6 +20,10 @@ provisioner:
   name: ansible
 verifier:
   name: ansible
+lint: |
+  set -e
+  yamllint -c ${MOLECULE_PROJECT_DIRECTORY}/.config/yamllint.yml .
+  ansible-lint
 scenario:
   converge_sequence:
     - create
